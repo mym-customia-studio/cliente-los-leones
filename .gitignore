@@ -1,0 +1,11 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Config local de Claude Code / herramientas
+.claude/
+*.local.json
+
+# Material pesado del cliente (originales, videos crudos) no va al repo
+_material/originales/

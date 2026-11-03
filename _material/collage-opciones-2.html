@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opciones de collage 2 — portada</title>
+<link rel="stylesheet" href="../assets/css/estilos.css">
+<style>
+body{background:#EAE1D2;padding:28px}
+h2{margin:36px 0 10px;font-size:1.1rem}
+h2 small{font-weight:500;color:#6F635A;font-size:.9rem;margin-left:10px}
+.demo{position:relative;height:640px;border-radius:10px;overflow:hidden;color:#fff;background:#2B211C}
+.demo img{object-fit:cover;display:block}
+.txt p.sobre{font-size:.95rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#F0DDB8;margin-bottom:16px}
+.txt h1{font-size:5.6rem;font-weight:800;letter-spacing:-.035em;line-height:1;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.txt h1 span{display:block}
+.txt h1 span:first-child{font-size:.4em;font-weight:600;letter-spacing:.28em;text-transform:uppercase;margin-bottom:.3em}
+.txt .lema{margin:22px 0 0;padding-top:20px;position:relative;font-size:1.6rem;font-weight:600;color:#F0DDB8;max-width:30ch}
+.txt .lema::before{content:"";position:absolute;top:0;left:0;width:56px;height:2px;background:#D4A356}
+.centrado .txt{text-align:center}.centrado .txt .lema{margin-inline:auto}.centrado .txt .lema::before{left:50%;transform:translateX(-50%)}
+
+/* E · Partido: texto a la izquierda sobre nogal, cuadrícula 2×2 a la derecha */
+.e{display:grid;grid-template-columns:1fr 1fr}
+.e .txt{align-self:center;padding:0 64px}
+.e .grilla{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:6px;padding:6px}
+.e .grilla img{width:100%;height:100%;border-radius:6px}
+
+/* F · Foto grande calma + tarjetas */
+.f .fondo{position:absolute;inset:0;width:100%;height:100%}
+.f .velo{position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,33,28,.85) 0%,rgba(43,33,28,.55) 45%,rgba(43,33,28,.15) 100%)}
+.f .txt{position:absolute;left:64px;top:50%;transform:translateY(-50%);max-width:620px}
+.f .tarjetas{position:absolute;right:56px;top:50%;transform:translateY(-50%);display:grid;gap:14px}
+.f .tarjetas img{width:230px;height:160px;border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.f .tarjetas img:nth-child(2){margin-left:60px}
+
+/* G · Banda de fotos abajo del texto */
+.g{display:grid;grid-template-rows:1fr 240px}
+.g .txt{align-self:center;padding:0 64px;text-align:center}
+.g .txt .lema{margin-inline:auto}.g .txt .lema::before{left:50%;transform:translateX(-50%)}
+.g .banda{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;padding:0 6px 6px}
+.g .banda img{width:100%;height:100%;border-radius:6px}
+
+/* H · Postales sueltas alrededor del texto */
+.h{display:grid;place-items:center}
+.h .txt{position:relative;z-index:2;text-align:center}
+.h .txt .lema{margin-inline:auto}.h .txt .lema::before{left:50%;transform:translateX(-50%)}
+.h .postal{position:absolute;width:250px;height:180px;border-radius:6px;box-shadow:0 24px 50px rgba(0,0,0,.45);border:6px solid #FAF7F1}
+.h .p1{left:48px;top:40px;transform:rotate(-6deg)}
+.h .p2{right:60px;top:36px;transform:rotate(5deg)}
+.h .p3{left:90px;bottom:40px;transform:rotate(4deg)}
+.h .p4{right:110px;bottom:50px;transform:rotate(-5deg)}
+.h .p5{left:50%;top:20px;transform:translateX(-50%) rotate(2deg);width:200px;height:140px}
+.h .fondo-tex{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,#3A2E27,#2B211C)}
+</style>
+</head>
+<body>
+
+<h2>E · Partido <small>texto sobre nogal a la izquierda, cuadrícula 2×2 a la derecha; en celular la grilla va debajo</small></h2>
+<div class="demo e">
+  <div class="txt"><p class="sobre">Carlos Keen · Luján</p><h1><span>Complejo</span><span>Los Leones</span></h1><p class="lema">Una experiencia de campo para toda la familia</p></div>
+  <div class="grilla">
+    <img src="../assets/img/portada-galeria.jpg" alt=""><img src="../assets/img/portada-sulky.jpg" alt="">
+    <img src="../assets/img/portada-ternero.jpg" alt=""><img src="../assets/img/portada-laguna.jpg" alt="">
+  </div>
+</div>
+
+<h2>F · Foto calma + tarjetas <small>la laguna al atardecer de fondo, tres tarjetas apiladas a la derecha que entran una a una</small></h2>
+<div class="demo f">
+  <img class="fondo" src="../assets/img/portada-laguna.jpg" alt="">
+  <div class="velo"></div>
+  <div class="txt"><p class="sobre">Carlos Keen · Luján</p><h1><span>Complejo</span><span>Los Leones</span></h1><p class="lema">Una experiencia de campo para toda la familia</p></div>
+  <div class="tarjetas">
+    <img src="../assets/img/portada-galeria.jpg" alt="">
+    <img src="../assets/img/portada-sulky.jpg" alt="">
+    <img src="../assets/img/portada-ternero.jpg" alt="">
+  </div>
+</div>
+
+<h2>G · Texto arriba, banda de fotos abajo <small>el texto respira sobre nogal; seis fotos en fila al pie, como una vidriera</small></h2>
+<div class="demo g">
+  <div class="txt"><p class="sobre">Carlos Keen · Luján</p><h1><span>Complejo</span><span>Los Leones</span></h1><p class="lema">Una experiencia de campo para toda la familia</p></div>
+  <div class="banda">
+    <img src="../assets/img/portada-galeria.jpg" alt=""><img src="../assets/img/portada-sulky.jpg" alt=""><img src="../assets/img/portada-laguna.jpg" alt=""><img src="../assets/img/portada-ternero.jpg" alt=""><img src="../assets/img/portada-salon.jpg" alt=""><img src="../assets/img/portada-pileta.jpg" alt="">
+  </div>
+</div>
+
+<h2>H · Postales sueltas <small>fotos con marco blanco, apenas giradas, alrededor del texto; entran "cayendo" una a una y quedan quietas</small></h2>
+<div class="demo h">
+  <div class="fondo-tex"></div>
+  <img class="postal p1" src="../assets/img/portada-galeria.jpg" alt="">
+  <img class="postal p2" src="../assets/img/portada-sulky.jpg" alt="">
+  <img class="postal p3" src="../assets/img/portada-ternero.jpg" alt="">
+  <img class="postal p4" src="../assets/img/portada-pileta.jpg" alt="">
+  <img class="postal p5" src="../assets/img/portada-laguna.jpg" alt="">
+  <div class="txt"><p class="sobre">Carlos Keen · Luján</p><h1><span>Complejo</span><span>Los Leones</span></h1><p class="lema">Una experiencia de campo para toda la familia</p></div>
+</div>
+
+</body>
+</html>
