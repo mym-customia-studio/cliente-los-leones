@@ -26,8 +26,8 @@
 {"@context":"https://schema.org","@type":["Restaurant","TouristAttraction"],"name":"Complejo Los Leones","description":"Restaurante de campo y complejo de eventos en Carlos Keen, Luján: día de campo con granja y actividades para toda la familia, egresaditos, celebraciones y salones para eventos.","url":"https://complejolosleones.com/","telephone":"+54 9 11 3113-8561","image":"https://complejolosleones.com/assets/img/og.jpg","address":{"@type":"PostalAddress","streetAddress":"Camino a Carlos Keen km 4,5","addressLocality":"Carlos Keen","addressRegion":"Buenos Aires","postalCode":"B6701","addressCountry":"AR"},"geo":{"@type":"GeoCoordinates","latitude":-34.5113596,"longitude":-59.1835315},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"10:00","closes":"19:00"}],"servesCuisine":"Argentina","priceRange":"$$$","sameAs":["https://www.instagram.com/complejolosleones/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"2724"}}
 </script>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-var.woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/estilos.min.css?v=20261103t">
-<script src="assets/js/main.js?v=20261103t" defer></script>
+<link rel="stylesheet" href="assets/css/estilos.min.css?v=20261103v">
+<script src="assets/js/main.js?v=20261103u" defer></script>
 </head>
 <body>
 <a class="saltar" href="#contenido">Saltar al contenido</a>
@@ -69,44 +69,14 @@
 
 <!-- ═══ 1 · PORTADA ═══════════════════════════════════════════════ -->
 <section class="hero" id="inicio">
-  <!-- Fondo: arranca con la laguna y, cuando el texto terminó de entrar, va pasando por todas las fotos con fundido lento.
-       Todas las fotos vienen en el HTML; el JS espera a que carguen y arranca junto con el texto. -->
-  <div class="hero-fondos">
+  <!-- Fondo: arranca con la galería; las otras cinco fotos (data-pc / data-movil) las agrega el JS después de que
+       cargó la página y, cuando el texto terminó de entrar, van pasando con fundido lento. -->
+  <div class="hero-fondos" data-pc="llamas,salon,cava" data-movil="llamas,salon,cava">
     <picture>
-      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-laguna-movil.webp">
-      <source media="(max-width:700px)" srcset="assets/img/fondo-laguna-movil.jpg">
-      <source type="image/webp" srcset="assets/img/fondo-laguna.webp">
-      <img src="assets/img/fondo-laguna.jpg" alt="La laguna y el puente al atardecer" width="1600" height="900" decoding="async" class="activa" fetchpriority="high">
-    </picture>
-    <picture>
-      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-galeria-movil.webp">
-      <source media="(max-width:700px)" srcset="assets/img/fondo-galeria-movil.jpg">
-      <source type="image/webp" srcset="assets/img/fondo-galeria.webp">
-      <img src="assets/img/fondo-galeria.jpg" alt="La galería de arcos del complejo al atardecer" width="1600" height="900" decoding="async">
-    </picture>
-    <picture>
-      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-ternero-movil.webp">
-      <source media="(max-width:700px)" srcset="assets/img/fondo-ternero-movil.jpg">
-      <source type="image/webp" srcset="assets/img/fondo-ternero.webp">
-      <img src="assets/img/fondo-ternero.jpg" alt="Vaca con su ternero recién nacido en la granja" width="1600" height="900" decoding="async">
-    </picture>
-    <picture>
-      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-llamas-movil.webp">
-      <source media="(max-width:700px)" srcset="assets/img/fondo-llamas-movil.jpg">
-      <source type="image/webp" srcset="assets/img/fondo-llamas.webp">
-      <img src="assets/img/fondo-llamas.jpg" alt="Las llamas de la granja" width="1600" height="900" decoding="async">
-    </picture>
-    <picture>
-      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-salon-movil.webp">
-      <source media="(max-width:700px)" srcset="assets/img/fondo-salon-movil.jpg">
-      <source type="image/webp" srcset="assets/img/fondo-salon.webp">
-      <img src="assets/img/fondo-salon.jpg" alt="Salón de eventos con ventanales al parque" width="1600" height="900" decoding="async">
-    </picture>
-    <picture>
-      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-cava-movil.webp">
-      <source media="(max-width:700px)" srcset="assets/img/fondo-cava-movil.jpg">
-      <source type="image/webp" srcset="assets/img/fondo-cava.webp">
-      <img src="assets/img/fondo-cava.jpg" alt="La cava de vinos" width="1600" height="900" decoding="async">
+      <source media="(max-width:700px)" type="image/webp" srcset="assets/img/fondo-barquitos-movil-720.webp">
+      <source media="(max-width:700px)" srcset="assets/img/fondo-barquitos-movil-720.jpg">
+      <source type="image/webp" srcset="assets/img/fondo-barquitos.webp">
+      <img src="assets/img/fondo-barquitos.jpg" alt="Barquitos de papel en la laguna del complejo al atardecer" width="1600" height="900" decoding="async" class="activa" fetchpriority="high">
     </picture>
   </div>
   <div class="cont hero-in">
@@ -130,7 +100,7 @@
   <ul class="franjas">
     <li class="franja rev dia" data-lado="izq">
       <a href="#incluye">
-        <picture><source type="image/webp" srcset="assets/img/plan-dia-de-campo.webp"><img src="assets/img/plan-dia-de-campo.jpg" alt="" width="1200" height="900" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="assets/img/plan-dia-de-campo-480.webp 480w, assets/img/plan-dia-de-campo-800.webp 800w, assets/img/plan-dia-de-campo.webp 1200w" sizes="(max-width:700px) 100vw, 58vw"><img src="assets/img/plan-dia-de-campo-800.jpg" srcset="assets/img/plan-dia-de-campo-480.jpg 480w, assets/img/plan-dia-de-campo-800.jpg 800w, assets/img/plan-dia-de-campo.jpg 1200w" sizes="(max-width:700px) 100vw, 58vw" alt="" width="1200" height="900" loading="lazy" decoding="async"></picture>
         <div class="cont franja-in">
           <span class="tag">El clásico</span>
           <h3>Día de campo</h3>
@@ -140,7 +110,7 @@
     </li>
     <li class="franja rev egre-f" data-lado="der">
       <a href="#egresaditos">
-        <picture><source type="image/webp" srcset="assets/img/plan-egresaditos.webp"><img src="assets/img/plan-egresaditos.jpg" alt="" width="1200" height="900" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="assets/img/plan-egresaditos-480.webp 480w, assets/img/plan-egresaditos-800.webp 800w, assets/img/plan-egresaditos.webp 1200w" sizes="(max-width:700px) 100vw, 58vw"><img src="assets/img/plan-egresaditos-800.jpg" srcset="assets/img/plan-egresaditos-480.jpg 480w, assets/img/plan-egresaditos-800.jpg 800w, assets/img/plan-egresaditos.jpg 1200w" sizes="(max-width:700px) 100vw, 58vw" alt="" width="1200" height="900" loading="lazy" decoding="async"></picture>
         <div class="cont franja-in">
           <span class="tag">Jardín y primaria</span>
           <h3>Egresaditos</h3>
@@ -150,7 +120,7 @@
     </li>
     <li class="franja rev cele" data-lado="izq">
       <a href="https://wa.me/5491131138561?text=Hola!%20Quiero%20info%20para%20una%20celebraci%C3%B3n.%20Fecha%3A%20____%20%C2%B7%20Somos%3A%20____" target="_blank" rel="noopener">
-        <picture><source type="image/webp" srcset="assets/img/plan-celebraciones.webp"><img src="assets/img/plan-celebraciones.jpg" alt="" width="1200" height="900" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="assets/img/plan-celebraciones-480.webp 480w, assets/img/plan-celebraciones-800.webp 800w, assets/img/plan-celebraciones.webp 1200w" sizes="(max-width:700px) 100vw, 58vw"><img src="assets/img/plan-celebraciones-800.jpg" srcset="assets/img/plan-celebraciones-480.jpg 480w, assets/img/plan-celebraciones-800.jpg 800w, assets/img/plan-celebraciones.jpg 1200w" sizes="(max-width:700px) 100vw, 58vw" alt="" width="1200" height="900" loading="lazy" decoding="async"></picture>
         <div class="cont franja-in">
           <span class="tag">Cumpleaños y reuniones</span>
           <h3>Celebraciones</h3>
@@ -160,7 +130,7 @@
     </li>
     <li class="franja rev even" data-lado="der">
       <a href="https://wa.me/5491131138561?text=Hola!%20Quiero%20info%20para%20un%20evento%20en%20sal%C3%B3n.%20Tipo%3A%20____%20%C2%B7%20Fecha%3A%20____" target="_blank" rel="noopener">
-        <picture><source type="image/webp" srcset="assets/img/plan-eventos.webp"><img src="assets/img/plan-eventos.jpg" alt="" width="800" height="600" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="assets/img/plan-eventos-480.webp 480w, assets/img/plan-eventos.webp 800w" sizes="(max-width:700px) 100vw, 58vw"><img src="assets/img/plan-eventos.jpg" srcset="assets/img/plan-eventos-480.jpg 480w, assets/img/plan-eventos.jpg 800w" sizes="(max-width:700px) 100vw, 58vw" alt="" width="800" height="600" loading="lazy" decoding="async"></picture>
         <div class="cont franja-in">
           <span class="tag">Salones hasta 300 personas</span>
           <h3>Eventos y salones</h3>
@@ -180,18 +150,18 @@
     </div>
     <div class="coverflow rev" id="coverflow">
       <ul class="cf-pista">
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-granja.webp"><img src="assets/img/act-granja.jpg" alt="Granja" width="800" height="800"></picture><span>Granja</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-ternero.webp"><img src="assets/img/act-ternero.jpg" alt="Animales de campo" width="800" height="800"></picture><span>Animales de campo</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-llamas.webp"><img src="assets/img/act-llamas.jpg" alt="Llamas" width="800" height="800"></picture><span>Llamas</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-caballo.webp"><img src="assets/img/act-caballo.jpg" alt="Paseo a caballo" width="800" height="800"></picture><span>Paseo a caballo</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-sulky.webp"><img src="assets/img/act-sulky.jpg" alt="Paseo en sulky" width="800" height="800"></picture><span>Paseo en sulky</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-tirolesa.webp"><img src="assets/img/act-tirolesa.jpg" alt="Tirolesa" width="800" height="800"></picture><span>Tirolesa</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-pan.webp"><img src="assets/img/act-pan.jpg" alt="Taller de pan" width="800" height="800"></picture><span>Taller de pan</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-maquillaje.webp"><img src="assets/img/act-maquillaje.jpg" alt="Maquillaje artístico" width="800" height="800"></picture><span>Maquillaje artístico</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-juegos.webp"><img src="assets/img/act-juegos.jpg" alt="Plaza de juegos" width="800" height="800"></picture><span>Plaza de juegos</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-arco.webp"><img src="assets/img/act-arco.jpg" alt="Tiro con arco" width="800" height="800"></picture><span>Tiro con arco</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-folclore.webp"><img src="assets/img/act-folclore.jpg" alt="Folclore en vivo" width="800" height="800"></picture><span>Folclore en vivo</span></li>
-      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-circo.webp"><img src="assets/img/act-circo.jpg" alt="Show infantil" width="800" height="800"></picture><span>Show infantil</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-granja-320.webp 320w, assets/img/act-granja-480.webp 480w, assets/img/act-granja.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-granja-480.jpg" srcset="assets/img/act-granja-320.jpg 320w, assets/img/act-granja-480.jpg 480w, assets/img/act-granja.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Granja" width="800" height="800" decoding="async"></picture><span>Granja</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-ternero-320.webp 320w, assets/img/act-ternero-480.webp 480w, assets/img/act-ternero.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-ternero-480.jpg" srcset="assets/img/act-ternero-320.jpg 320w, assets/img/act-ternero-480.jpg 480w, assets/img/act-ternero.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Animales de campo" width="800" height="800" decoding="async" loading="lazy"></picture><span>Animales de campo</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-llamas-320.webp 320w, assets/img/act-llamas-480.webp 480w, assets/img/act-llamas.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-llamas-480.jpg" srcset="assets/img/act-llamas-320.jpg 320w, assets/img/act-llamas-480.jpg 480w, assets/img/act-llamas.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Llamas" width="800" height="800" decoding="async" loading="lazy"></picture><span>Llamas</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-caballo-320.webp 320w, assets/img/act-caballo-480.webp 480w, assets/img/act-caballo.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-caballo-480.jpg" srcset="assets/img/act-caballo-320.jpg 320w, assets/img/act-caballo-480.jpg 480w, assets/img/act-caballo.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Paseo a caballo" width="800" height="800" decoding="async" loading="lazy"></picture><span>Paseo a caballo</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-sulky-320.webp 320w, assets/img/act-sulky-480.webp 480w, assets/img/act-sulky.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-sulky-480.jpg" srcset="assets/img/act-sulky-320.jpg 320w, assets/img/act-sulky-480.jpg 480w, assets/img/act-sulky.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Paseo en sulky" width="800" height="800" decoding="async" loading="lazy"></picture><span>Paseo en sulky</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-tirolesa-320.webp 320w, assets/img/act-tirolesa-480.webp 480w, assets/img/act-tirolesa.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-tirolesa-480.jpg" srcset="assets/img/act-tirolesa-320.jpg 320w, assets/img/act-tirolesa-480.jpg 480w, assets/img/act-tirolesa.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Tirolesa" width="800" height="800" decoding="async" loading="lazy"></picture><span>Tirolesa</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-pan-320.webp 320w, assets/img/act-pan-480.webp 480w, assets/img/act-pan.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-pan-480.jpg" srcset="assets/img/act-pan-320.jpg 320w, assets/img/act-pan-480.jpg 480w, assets/img/act-pan.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Taller de pan" width="800" height="800" decoding="async" loading="lazy"></picture><span>Taller de pan</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-maquillaje-320.webp 320w, assets/img/act-maquillaje-480.webp 480w, assets/img/act-maquillaje.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-maquillaje-480.jpg" srcset="assets/img/act-maquillaje-320.jpg 320w, assets/img/act-maquillaje-480.jpg 480w, assets/img/act-maquillaje.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Maquillaje artístico" width="800" height="800" decoding="async" loading="lazy"></picture><span>Maquillaje artístico</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-juegos-320.webp 320w, assets/img/act-juegos-480.webp 480w, assets/img/act-juegos.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-juegos-480.jpg" srcset="assets/img/act-juegos-320.jpg 320w, assets/img/act-juegos-480.jpg 480w, assets/img/act-juegos.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Plaza de juegos" width="800" height="800" decoding="async" loading="lazy"></picture><span>Plaza de juegos</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-arco-320.webp 320w, assets/img/act-arco-480.webp 480w, assets/img/act-arco.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-arco-480.jpg" srcset="assets/img/act-arco-320.jpg 320w, assets/img/act-arco-480.jpg 480w, assets/img/act-arco.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Tiro con arco" width="800" height="800" decoding="async" loading="lazy"></picture><span>Tiro con arco</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-folclore-320.webp 320w, assets/img/act-folclore-480.webp 480w, assets/img/act-folclore.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-folclore-480.jpg" srcset="assets/img/act-folclore-320.jpg 320w, assets/img/act-folclore-480.jpg 480w, assets/img/act-folclore.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Folclore en vivo" width="800" height="800" decoding="async" loading="lazy"></picture><span>Folclore en vivo</span></li>
+      <li class="cf-item"><picture><source type="image/webp" srcset="assets/img/act-circo-320.webp 320w, assets/img/act-circo-480.webp 480w, assets/img/act-circo.webp 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px"><img src="assets/img/act-circo-480.jpg" srcset="assets/img/act-circo-320.jpg 320w, assets/img/act-circo-480.jpg 480w, assets/img/act-circo.jpg 800w" sizes="(max-width:700px) 230px, (max-width:1200px) 34vw, 420px" alt="Show infantil" width="800" height="800" decoding="async" loading="lazy"></picture><span>Show infantil</span></li>
       </ul>
     </div>
     <div class="reserva rev">
@@ -206,7 +176,7 @@
   <div class="cont">
     <!-- Foto grande con el título montado encima -->
     <div class="egre-hero rev">
-      <picture><source type="image/webp" srcset="assets/img/egresaditos.webp"><img src="assets/img/egresaditos.jpg" alt="Grupo de egresaditos festejando en el parque del complejo" width="1200" height="900" loading="lazy"></picture><!-- ▼ imagen de ejemplo (IA): reemplazar por foto real -->
+      <picture><source type="image/webp" srcset="assets/img/egresaditos-480.webp 480w, assets/img/egresaditos-800.webp 800w, assets/img/egresaditos.webp 1200w" sizes="(max-width:900px) 100vw, 1180px"><img src="assets/img/egresaditos-800.jpg" srcset="assets/img/egresaditos-480.jpg 480w, assets/img/egresaditos-800.jpg 800w, assets/img/egresaditos.jpg 1200w" sizes="(max-width:900px) 100vw, 1180px" alt="Grupo de egresaditos festejando en el parque del complejo" width="1200" height="900" loading="lazy" decoding="async"></picture><!-- ▼ imagen de ejemplo (IA): reemplazar por foto real -->
       <div class="egre-hero-texto">
         <span class="tag">Egresaditos · Jardín y primaria</span>
         <h2><span class="w">El</span> <span class="w">último</span> <span class="w">día</span> <span class="w">de</span> <span class="w">clases</span><br><span class="w">que</span> <span class="w">nadie</span> <span class="w">se</span> <span class="w">olvida</span></h2>
@@ -255,7 +225,7 @@
     <div class="resenas-cab rev">
       <div class="resenas-score">
         <b class="score-num" data-contar="4,5">0,0</b>
-        <div class="score-estrellas" aria-label="4,5 de 5 estrellas"><i></i><i></i><i></i><i></i><i class="media"></i></div>
+        <div class="score-estrellas" role="img" aria-label="4,5 de 5 estrellas"><i></i><i></i><i></i><i></i><i class="media"></i></div>
         <span>más de 2.700 reseñas</span>
       </div>
       <div>
@@ -266,19 +236,19 @@
     <div class="resenas-grid">
       <article class="resena rev">
         <svg class="comilla" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm8 0h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-3V7z"/></svg>
-        <div class="estrellas" aria-label="5 estrellas">★★★★★</div>
+        <div class="estrellas" role="img" aria-label="5 estrellas">★★★★★</div>
         <p>Pasamos un día de campo que disfrutamos de punta a punta. Nos asignaron la mesa, tomamos mate afuera y los chicos no pararon.</p>
         <footer><span class="avatar">G</span><div><b>Gabriela</b><small>Local Guide · Google</small></div></footer>
       </article>
       <article class="resena rev destacada">
         <svg class="comilla" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm8 0h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-3V7z"/></svg>
-        <div class="estrellas" aria-label="5 estrellas">★★★★★</div>
+        <div class="estrellas" role="img" aria-label="5 estrellas">★★★★★</div>
         <p>10 de 10. Los niños entretenidos con la visita a la granja, taller de pan, paseo a caballo, inflables, maquillaje y canchita.</p>
         <footer><span class="avatar">R</span><div><b>Romina</b><small>Local Guide · Google</small></div></footer>
       </article>
       <article class="resena rev">
         <svg class="comilla" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3H7V7zm8 0h5v5c0 3-2 5-5 5v-2c1.7 0 3-1.3 3-3h-3V7z"/></svg>
-        <div class="estrellas" aria-label="5 estrellas">★★★★★</div>
+        <div class="estrellas" role="img" aria-label="5 estrellas">★★★★★</div>
         <p>Qué injusto darles solo 5 estrellas. Granja linda y variada, comida riquísima.</p>
         <footer><span class="avatar">O</span><div><b>Osvaldo</b><small>Local Guide · Google</small></div></footer>
       </article>

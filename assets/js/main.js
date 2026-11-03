@@ -59,6 +59,21 @@
   if (hero && fondos) {
     var fotos = Array.prototype.slice.call(fondos.querySelectorAll('img'));
     var actual = 0;
+    /* las demás fotos se agregan recién cuando terminó de cargar la página (no compiten con la primera) */
+    function cargarResto() {
+      var movil = window.matchMedia('(max-width:700px)').matches;
+      (fondos.getAttribute(movil ? 'data-movil' : 'data-pc') || '').split(',').forEach(function (n) {
+        if (!n) return;
+        var img = new Image();
+        img.alt = '';
+        img.decoding = 'async';
+        img.src = 'assets/img/fondo-' + n + (movil ? '-movil-720' : '') + '.jpg';
+        img.srcset = 'assets/img/fondo-' + n + (movil ? '-movil-720' : '') + '.webp';
+        fondos.appendChild(img);
+        fotos.push(img);
+      });
+    }
+    if (document.readyState === 'complete') cargarResto(); else window.addEventListener('load', cargarResto);
     function mostrar(i) {
       fotos[actual].classList.remove('activa');
       fotos[i].classList.add('activa');
@@ -78,12 +93,11 @@
       hero.classList.add('arranca');
       lento();
     }
-    /* esperar a que carguen las fotos (máximo 2,5 s para no demorar la apertura en redes lentas) */
-    var listas = fotos.map(function (img) {
-      return img.complete ? Promise.resolve() : new Promise(function (ok) { img.onload = img.onerror = ok; });
-    });
+    /* arranca cuando cargó la primera foto (tope 2,5 s para redes lentas) */
+    var primera = fotos[0];
+    var lista = primera.complete ? Promise.resolve() : new Promise(function (ok) { primera.onload = primera.onerror = ok; });
     var tope = new Promise(function (ok) { setTimeout(ok, 2500); });
-    Promise.race([Promise.all(listas), tope]).then(apertura);
+    Promise.race([lista, tope]).then(apertura);
   }
 
   /* Aparición al scrollear: cada pieza .rev se muestra cuando entra en pantalla, escalonada */
